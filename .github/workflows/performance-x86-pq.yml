@@ -9,9 +9,7 @@ jobs:
   performance:
     name: Performance-x86-pq
     runs-on: ubuntu-latest
-    concurrency:
-      group: performance-${{ github.event.pull_request.number }}
-      cancel-in-progress: true
+  
     container:
       image: vsaglib/vsag:ci-x86
     env:
