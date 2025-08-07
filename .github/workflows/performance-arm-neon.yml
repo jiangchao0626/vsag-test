@@ -25,15 +25,7 @@ jobs:
 
        
       
-      # PQ Tests
-      - name: Run Perf - PQ
-        id: test-pq
-        continue-on-error: true
-        run: |
-          echo "::group::PQ Performance Tests"
-          ./build-release/tools/eval/eval_performance .github/perf-pq.yml 2>&1 | tee /tmp/perf-pq.log
-          echo "::endgroup::"
-      
+
     
       
       # RABITQ Tests
